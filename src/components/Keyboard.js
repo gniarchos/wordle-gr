@@ -4,7 +4,7 @@ import wordsBank from "../words-bank.txt"
 
 export default function Keyboard(props) {
 
-  const {board, setBoard, currAttempt, setCurrAttempt, setWon, setLose, pickedWord, gameEnded, setGameEnded, won, lose} = React.useContext(AppContext)
+  const {board, setBoard, currAttempt, setCurrAttempt, setWon, setLose, pickedWord, gameEnded, setGameEnded, won, lose, targetWords} = React.useContext(AppContext)
   const [currPosition, setCurrPosition] = React.useState(0)
   const [endOfRow, setEndOfRow] = React.useState(false)
   const [correctLetters, setCorrectLetters] = React.useState([])
