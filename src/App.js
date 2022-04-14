@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import Board from "./components/Board"
 import Keyboard from "./components/Keyboard"
 import { createContext } from "react"
-// import wordsBank from "./words-bank.txt"
+import wordsBank from "./words-bank.txt"
 // import wordsBank from "https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt"
 import Confetti from 'react-confetti'
 
@@ -54,20 +54,14 @@ const showDiv = {
 }
 
 
-
-
 React.useEffect(() => {
-  fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/gh-pages/static/media/words-bank.5c658cc1c1d075cc8a80.txt")
+  fetch(wordsBank)
     .then((response) => response.text())
       .then((result) => {
         const wordArr = result.split("\r\n");
-        // setWordsList([wordArr])
-        // wordArr.includes("ΚΑΛΟΣ\r")
-        // console.log(wordArr)
-        // console.log(wordArr.includes("ΚΑΛΟΣ"))
         setPickedWord(wordArr[Math.floor(Math.random() * wordArr.length)])
-        // console.log(todaysWord)
       })
+  
 }, [])
 
 
