@@ -17,32 +17,28 @@ export default function Keyboard(props) {
 
     if (innerHTML === "ENTER")
     {
-      setCurrAttempt(prevAtt => prevAtt = prevAtt + 1)
+      
+      fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt")
+      .then((response) => response.text())
+        .then((result) => {
+          const wordArr = result.split("\r\n");
+          const typedWord = board[currAttempt].toString().replace(/[,]/g, '');
+          // console.log(wordArr.includes(typedWord))
+        
+          if (wordArr.includes(typedWord))
+          {
+            setCurrAttempt(prevAtt => prevAtt = prevAtt + 1)
             setCurrPosition(0)
             setEndOfRow(false)
             // props.checkLetters(currAttempt)
             checkLetters(currAttempt)
-      // fetch(wordsBank)
-      // .then((response) => response.text())
-      //   .then((result) => {
-      //     const wordArr = result.split("\r\n");
-      //     const typedWord = board[currAttempt].toString().replace(/[,]/g, '');
-      //     // console.log(wordArr.includes(typedWord))
-        
-      //     if (wordArr.includes(typedWord))
-      //     {
-      //       setCurrAttempt(prevAtt => prevAtt = prevAtt + 1)
-      //       setCurrPosition(0)
-      //       setEndOfRow(false)
-      //       // props.checkLetters(currAttempt)
-      //       checkLetters(currAttempt)
-      //     }
-      //     else 
-      //     {
-      //       alert(`${typedWord} is not a valid word.`)
-      //     }
+          }
+          else 
+          {
+            alert(`${typedWord} is not a valid word.`)
+          }
 
-      // })
+      })
 
     }
     else if (innerHTML === "DELETE")
