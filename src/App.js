@@ -57,7 +57,7 @@ const showDiv = {
 
 
 React.useEffect(() => {
-  fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt")
+  fetch("https://cdn.rawgit.com/gniarchos/wordle-gr/master/src/words-bank.txt")
     .then((response) => response.text())
       .then((result) => {
         const wordArr = result.split("\r\n");
