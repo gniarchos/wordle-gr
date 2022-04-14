@@ -2,42 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,200;0,400;0,500;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <link rel="icon" href="./images/tab_icon.png">
+    <title>Wordle | Greek Edition</title>
   </head>
+  <style type="text/css">
+    body {
+      margin: 0;
+      background: #121213;
+      color: whitesmoke;
+      transition: all 0.5s linear;
+      --navbar-line: #3A3A3C;
+      --board-letter-back: #3A3A3C;
+      --border-board: #3A3A3C;
+      --text-color: whitesmoke;
+      --text-color-btn: black;
+      --keyboard-letter-back: #818384;
+      --keyboard-not: #3A3A3C;
+      --images-color: white;
+      --btn-color: whitesmoke;
+      --popup-bg: #121213;
+
+    }
+
+    .light {
+      margin: 0;
+      background: white;
+      color: black;
+      transition: all 0.5s linear;
+      --navbar-line: #d3d6da;
+      --board-letter-back: #787c7e;
+      --border-board: #d3d6da;
+      --text-color: black;
+      --text-color-btn: whitesmoke;
+      --keyboard-letter-back: #D3D6DA;
+      --keyboard-not: #787C7E;
+      --images-color: black;
+      --btn-color: #787C7E;
+      --popup-bg: whitesmoke;
+
+    }
+    
+  </style>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
