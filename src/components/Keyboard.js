@@ -18,14 +18,16 @@ export default function Keyboard(props) {
     if (innerHTML === "ENTER")
     {
       
-      fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt")
-      .then((response) => response.text())
-        .then((result) => {
-          const wordArr = result.split("\r\n");
+      // fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt")
+      // .then((response) => response.text())
+      //   .then((result) => {
+      //     const wordArr = result.split("\r\n");
           const typedWord = board[currAttempt].toString().replace(/[,]/g, '');
           // console.log(wordArr.includes(typedWord))
+
+
         
-          if (wordArr.includes(typedWord))
+          if (targetWords.includes(typedWord))
           {
             setCurrAttempt(prevAtt => prevAtt = prevAtt + 1)
             setCurrPosition(0)
@@ -38,7 +40,7 @@ export default function Keyboard(props) {
             alert(`${typedWord} is not a valid word.`)
           }
 
-      })
+      // })
 
     }
     else if (innerHTML === "DELETE")
