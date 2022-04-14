@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import Board from "./components/Board"
 import Keyboard from "./components/Keyboard"
 import { createContext } from "react"
-import wordsBank from "./words-bank.txt"
+// import wordsBank from "./words-bank.txt"
 // import wordsBank from "https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt"
 import Confetti from 'react-confetti'
 
@@ -55,7 +55,7 @@ const showDiv = {
 
 
 React.useEffect(() => {
-  fetch(wordsBank)
+  fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt")
     .then((response) => response.text())
       .then((result) => {
         const wordArr = result.split("\r\n");
