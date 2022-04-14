@@ -27,7 +27,7 @@ export default function Navbar() {
   }
 
   function gotoGithub() {
-    window.location.href='https://www.google.com/'
+    window.location.href='https://github.com/gniarchos/wordle-gr'
   }
 
   function changeTheme() {
