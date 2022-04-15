@@ -1,6 +1,6 @@
 # :game_die: Wordle - Greek Edition
 
-This project was made using React. The words list taken from [Scrabble Games](https://sites.google.com/site/dimizaro/lexiko/lexeis5grammaton.
+This project was made using React. The words list taken from [Scrabble Games](https://sites.google.com/site/dimizaro/lexiko/lexeis5grammaton).
 
 ##  :video_game: How to play
 
