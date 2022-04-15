@@ -17,30 +17,19 @@ export default function Keyboard(props) {
 
     if (innerHTML === "ENTER")
     {
-      
-      // fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt")
-      // .then((response) => response.text())
-      //   .then((result) => {
-      //     const wordArr = result.split("\r\n");
-          const typedWord = board[currAttempt].toString().replace(/[,]/g, '');
-          // console.log(wordArr.includes(typedWord))
+      const typedWord = board[currAttempt].toString().replace(/[,]/g, '');
 
-
-        
-          if (targetWords.includes(typedWord))
-          {
-            setCurrAttempt(prevAtt => prevAtt = prevAtt + 1)
-            setCurrPosition(0)
-            setEndOfRow(false)
-            // props.checkLetters(currAttempt)
-            checkLetters(currAttempt)
-          }
-          else 
-          {
-            alert(`${typedWord} is not a valid word.`)
-          }
-
-      // })
+      if (targetWords.includes(typedWord))
+      {
+        setCurrAttempt(prevAtt => prevAtt = prevAtt + 1)
+        setCurrPosition(0)
+        setEndOfRow(false)
+        checkLetters(currAttempt)
+      }
+      else 
+      {
+        alert(`${typedWord} is not a valid word.`)
+      }
 
     }
     else if (innerHTML === "DELETE")
@@ -67,13 +56,10 @@ export default function Keyboard(props) {
       }
       else
       {
-        // console.log("hello")
         const newBoard = [...board]
         newBoard[currAttempt][4] = ""
         setBoard(newBoard)
-        // setCurrPosition(prevPoss => prevPoss = prevPoss - 1)
         setEndOfRow(false)
-        // setEnterPressed(false)
       } 
       
     }
@@ -282,7 +268,6 @@ export default function Keyboard(props) {
   }, [currAttempt])
 
   function checkLetters(at) {
-    // let pickedWord = fixedPickedWord.slice(0, -1)
     let arrOfPickedWord = [...pickedWord]
     console.log(pickedWord)
 
@@ -290,12 +275,11 @@ export default function Keyboard(props) {
     {
       if (arrOfPickedWord.includes(board[at][i]))
       {
-        // console.log("Exists in letter.")
+        // console.log("Exists in word.")
         setNearLetters(prevLetters => [...prevLetters, board[at][i]])
       }
       else {
         setNotLetters(prevLetters => [...prevLetters, board[at][i]])
-        // console.log(notLetters)
       }
 
       if(board[at][i] === arrOfPickedWord[i])
@@ -317,7 +301,6 @@ export default function Keyboard(props) {
 
   if (numOfCorLetters === 5 && gameEnded === false) {
     console.log("WIN")
-    // setCurrAttempt(7)
     setWon(true)
     setGameEnded(true)
   }
@@ -326,7 +309,6 @@ export default function Keyboard(props) {
     if (numOfCorLetters < 5)
     {
       console.log("LOSE")
-      // setCurrAttempt(7)
       setLose(true)
       setGameEnded(true)
     }

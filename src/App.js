@@ -3,8 +3,6 @@ import Navbar from "./components/Navbar"
 import Board from "./components/Board"
 import Keyboard from "./components/Keyboard"
 import { createContext } from "react"
-// import wordsBank from "./words-bank.txt"
-// import wordsBank from "https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt"
 import Confetti from 'react-confetti'
 
 export const AppContext = createContext()
@@ -7449,9 +7447,6 @@ export default function App() {
 
   const [lightTheme, setLightTheme] = React.useState(localStorage.getItem("lightTheme"))
 
-  // !localStorage.getItem("lightTheme") && localStorage.setItem("lightTheme", "false")
-
-
   React.useEffect(() => {
 
     if (localStorage.getItem("lightTheme") === "true" ) 
@@ -7477,44 +7472,27 @@ export default function App() {
     ["", "", "", "", ""]
   ]
 
-const [pickedWord, setPickedWord] = React.useState("")
-const [board, setBoard] = React.useState(boardDefault)
-const [currAttempt, setCurrAttempt] = React.useState(0)
-const [won, setWon] = React.useState(false)
-const [lose, setLose] = React.useState(false)
-const [gameEnded, setGameEnded] = React.useState(false)
-// const [winsData, setWinsData] = React.useState(localStorage.getItem("wins") ? localStorage.getItem("wins") : 0)
+  const [pickedWord, setPickedWord] = React.useState("")
+  const [board, setBoard] = React.useState(boardDefault)
+  const [currAttempt, setCurrAttempt] = React.useState(0)
+  const [won, setWon] = React.useState(false)
+  const [lose, setLose] = React.useState(false)
+  const [gameEnded, setGameEnded] = React.useState(false)
 
-const showDiv = {
-  display: won || lose && "block"
-}
-
-
-// React.useEffect(() => {
-//   fetch("https://raw.githubusercontent.com/gniarchos/wordle-gr/master/src/words-bank.txt")
-//     .then((response) => response.text())
-//       .then((result) => {
-//         const wordArr = result.split("\r\n");
-//         setPickedWord(wordArr[Math.floor(Math.random() * wordArr.length)])
-//       })
-  
-// }, [])
+  const showDiv = {
+    display: won || lose && "block"
+  }
 
 
   React.useEffect(() => {
-    // const wordArr = targetWords.split("\r\n");
     setPickedWord(targetWords[Math.floor(Math.random() * targetWords.length)])
 
   }, [])
-
-  // console.log(pickedWord)
 
   function startNewGame() {
     console.log("Starting new game...")
     window.location.reload()
   }
-
-
 
   return (
     <div className="app">

@@ -3,8 +3,6 @@ import Letters from './Letters'
 
 export default function Board() {
 
-  // console.log(board)
-
   return (
     <div className='board-wrapper'>
       <div className='row-board'>

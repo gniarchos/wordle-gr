@@ -10,7 +10,6 @@ export default function Navbar() {
 
   const pushFilterStyle  = {
     top: "0px"
-
   }
 
   function closePopup() {
@@ -186,7 +185,7 @@ export default function Navbar() {
           </div>
           <div className='letter-wrapper'>
               <h1 className='letter-grey'>Α</h1>
-              <p className='color-info'>The letter Α is in the word but in the wrong spot.</p>
+              <p className='color-info'>The letter Α is not in the word in any spot.</p>
             </div>
           </div>
       </div>}
