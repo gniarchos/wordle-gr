@@ -3,12 +3,11 @@ import Navbar from "./components/Navbar"
 import Board from "./components/Board"
 import Keyboard from "./components/Keyboard"
 import { createContext } from "react"
-import Confetti from 'react-confetti'
+import Confetti from "react-confetti"
 
 export const AppContext = createContext()
 
 export default function App() {
-
   const targetWords = [
     "ΑΒΑΘΑ",
     "ΑΒΑΘΕ",
@@ -7443,25 +7442,19 @@ export default function App() {
     "ΩΩΔΕΣ",
     "ΩΩΔΗΣ",
     "ΩΩΔΩΝ",
-    ]
+  ]
 
-  const [lightTheme, setLightTheme] = React.useState(localStorage.getItem("lightTheme"))
+  const [lightTheme, setLightTheme] = React.useState(
+    localStorage.getItem("lightTheme")
+  )
 
   React.useEffect(() => {
-
-    if (localStorage.getItem("lightTheme") === "true" ) 
-    {
-      document.body.classList.add('light')
+    if (localStorage.getItem("lightTheme") === "true") {
+      document.body.classList.add("light")
+    } else {
+      document.body.classList.remove("light")
     }
-    else
-    {
-      document.body.classList.remove('light')
-    }
-
-
   }, [lightTheme])
-
-  
 
   const boardDefault = [
     ["", "", "", "", ""],
@@ -7469,7 +7462,7 @@ export default function App() {
     ["", "", "", "", ""],
     ["", "", "", "", ""],
     ["", "", "", "", ""],
-    ["", "", "", "", ""]
+    ["", "", "", "", ""],
   ]
 
   const [pickedWord, setPickedWord] = React.useState("")
@@ -7479,25 +7472,35 @@ export default function App() {
   const [lose, setLose] = React.useState(false)
   const [gameEnded, setGameEnded] = React.useState(false)
 
-  const showDiv = {
-    display: won || lose && "block"
-  }
-
-
   React.useEffect(() => {
     setPickedWord(targetWords[Math.floor(Math.random() * targetWords.length)])
-
   }, [])
 
   function startNewGame() {
-    console.log("Starting new game...")
+    // console.log("Starting new game...")
     window.location.reload()
   }
 
   return (
     <div className="app">
-      
-      <AppContext.Provider value={{board, setBoard, currAttempt, setCurrAttempt, pickedWord, setWon, setLose, setGameEnded, gameEnded, won, lose, lightTheme, setLightTheme, targetWords}}>
+      <AppContext.Provider
+        value={{
+          board,
+          setBoard,
+          currAttempt,
+          setCurrAttempt,
+          pickedWord,
+          setWon,
+          setLose,
+          setGameEnded,
+          gameEnded,
+          won,
+          lose,
+          lightTheme,
+          setLightTheme,
+          targetWords,
+        }}
+      >
         <Navbar />
         {won === true && <Confetti />}
         <div className="win-lose">
@@ -7505,24 +7508,27 @@ export default function App() {
           {lose === true && <h1>{pickedWord}</h1>}
         </div>
 
-        {( won === true || lose === true) && 
-        <div className="blur-bg">
-          <div className="win-lose-mobile">
-            {won === true && <h1>YOU WON!</h1>}
-            {lose === true && <h1>{pickedWord}</h1>}
+        {(won === true || lose === true) && (
+          <div className="blur-bg">
+            <div className="win-lose-mobile">
+              {won === true && <h1>YOU WON!</h1>}
+              {lose === true && <h1>{pickedWord}</h1>}
+            </div>
           </div>
-        </div>}
+        )}
 
         <Board />
 
         <div className="btn-new-div">
-          {gameEnded && <button className="btn-newGame" onClick={startNewGame}>New Game</button>}
+          {gameEnded && (
+            <button className="btn-newGame" onClick={startNewGame}>
+              New Game
+            </button>
+          )}
         </div>
-        
+
         <Keyboard />
       </AppContext.Provider>
-      
     </div>
   )
 }
-
