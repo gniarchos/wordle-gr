@@ -452,3 +452,23 @@
     font-size: 1.8rem;
   }
 }
+
+@media screen and (display-mode: standalone) {
+  .board-wrapper {
+    margin-top: 60px;
+  }
+
+  .keyboard {
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .btn-new-div {
+    z-index: 500;
+    height: 30px;
+  }
+
+  .blur-bg {
+    z-index: 500;
+  }
+}

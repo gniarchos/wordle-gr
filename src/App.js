@@ -7451,8 +7451,14 @@ export default function App() {
   React.useEffect(() => {
     if (localStorage.getItem("lightTheme") === "true") {
       document.body.classList.add("light")
+      document
+        .querySelector('meta[name="theme-color"]')
+        ?.setAttribute("content", "#fffff")
     } else {
       document.body.classList.remove("light")
+      document
+        .querySelector('meta[name="theme-color"]')
+        ?.setAttribute("content", "#121213")
     }
   }, [lightTheme])
 
