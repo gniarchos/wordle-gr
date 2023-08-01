@@ -22,4 +22,4 @@ The goal of the game is to guess the word within six tries. Each guess should be
 - User's statistics
 - Dark/Light theme
 - Only greek words
-- PWA (standalone app) compitable
+- PWA (standalone app) compatible
