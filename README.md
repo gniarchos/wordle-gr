@@ -18,6 +18,7 @@ The goal of the game is to guess the word within six tries. Each guess should be
 
 ## 🛠️ Features
 
+- Total words 7433
 - Daily infinite words
 - User statistics
 - Dark & Light mode
