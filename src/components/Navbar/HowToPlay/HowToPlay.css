@@ -1,0 +1,33 @@
+.game-info-general {
+  font-size: 1.5rem;
+}
+
+.game-info-letter-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.game-info-letter {
+  text-align: center;
+  width: 40px;
+  padding: 5px;
+  color: whitesmoke;
+}
+
+.game-info-letter.green {
+  background-color: #538d4e;
+}
+
+.game-info-letter.orange {
+  background-color: #b59f3b;
+}
+
+.game-info-letter.grey {
+  background-color: #555;
+}
+
+.game-info-color-text {
+  display: flex;
+  align-items: center;
+}
