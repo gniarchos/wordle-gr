@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import { Icon } from "@iconify/react"
 import { AppContext } from "../../App"
 import "./Navbar.css"
@@ -6,9 +6,9 @@ import Statistics from "./Statistics/Statistics"
 import HowToPlay from "./HowToPlay/HowToPlay"
 
 export default function Navbar() {
-  const { setLightTheme } = React.useContext(AppContext)
-  const [openStatistics, setOpenStatistics] = React.useState(false)
-  const [openInfo, setOpenInfo] = React.useState(false)
+  const { setLightTheme } = useContext(AppContext)
+  const [openStatistics, setOpenStatistics] = useState(false)
+  const [openInfo, setOpenInfo] = useState(false)
 
   const pushFilterStyle = {
     top: "0px",

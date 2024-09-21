@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import { AppContext } from "../../App"
 
 export default function Letters(props) {
-  const { board, pickedWord, currAttempt } = React.useContext(AppContext)
+  const { board, pickedWord, currAttempt } = useContext(AppContext)
   const letter = board[props.attempt][props.position]
   const correct = pickedWord[props.position] === letter
 

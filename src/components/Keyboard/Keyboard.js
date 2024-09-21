@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { AppContext } from "../../App"
 import "./Keyboard.css"
 import greek_keyboard from "../../components/greek-keyboard.json"
@@ -17,13 +17,13 @@ export default function Keyboard(props) {
     won,
     lose,
     targetWords,
-  } = React.useContext(AppContext)
-  const [currPosition, setCurrPosition] = React.useState(0)
-  const [endOfRow, setEndOfRow] = React.useState(false)
-  const [correctLetters, setCorrectLetters] = React.useState([])
-  const [nearLetters, setNearLetters] = React.useState([])
-  const [notLetters, setNotLetters] = React.useState([])
-  const [numOfCorLetters, setNumOfCorLetters] = React.useState(0)
+  } = useContext(AppContext)
+  const [currPosition, setCurrPosition] = useState(0)
+  const [endOfRow, setEndOfRow] = useState(false)
+  const [correctLetters, setCorrectLetters] = useState([])
+  const [nearLetters, setNearLetters] = useState([])
+  const [notLetters, setNotLetters] = useState([])
+  const [numOfCorLetters, setNumOfCorLetters] = useState(0)
   const greekKeyboard = greek_keyboard
 
   function addLetter(event) {
@@ -38,7 +38,7 @@ export default function Keyboard(props) {
         setEndOfRow(false)
         checkLetters(currAttempt)
       } else {
-        alert(`${typedWord} is not a valid word.`)
+        alert(`Η λέξη ${typedWord} δεν υπάρχει.`)
       }
     } else if (innerHTML === "DELETE") {
       if (endOfRow === false) {
@@ -75,7 +75,7 @@ export default function Keyboard(props) {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (won) {
       // GAMES PLAYED
       let games = parseInt(
@@ -387,7 +387,7 @@ export default function Keyboard(props) {
     }
   }, [gameEnded])
 
-  React.useEffect(() => {
+  useEffect(() => {
     setNumOfCorLetters(0)
   }, [currAttempt])
 
