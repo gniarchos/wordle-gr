@@ -1,0 +1,39 @@
+.board-wrapper {
+  margin-top: 100px;
+}
+
+.board-row-cells {
+  display: flex;
+  flex-direction: row;
+}
+
+.board-letter-cell {
+  width: 54px;
+  height: 54px;
+  background: none;
+  border: 2px solid var(--border-board);
+  color: var(--text-color);
+  font-size: 3rem;
+  text-align: center;
+  caret-color: transparent;
+  cursor: default;
+  text-transform: capitalize;
+  margin: 3px;
+  transition: all 0.5s linear;
+}
+
+.board-letter-cell:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  /* .board-wrapper {
+    margin-top: 20px;
+  } */
+}
+
+@media screen and (display-mode: standalone) {
+  .board-wrapper {
+    margin-top: 80px;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Navbar from "./components/Navbar/Navbar"
-import Board from "./components/Board"
+import Board from "./components/Board/Board"
 import Keyboard from "./components/Keyboard"
 import { createContext } from "react"
 import Confetti from "react-confetti"

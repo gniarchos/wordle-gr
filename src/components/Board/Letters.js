@@ -1,5 +1,5 @@
 import React from "react"
-import { AppContext } from "../App"
+import { AppContext } from "../../App"
 
 export default function Letters(props) {
   const { board, pickedWord, currAttempt } = React.useContext(AppContext)
@@ -15,10 +15,8 @@ export default function Letters(props) {
   }
 
   return (
-    <div className="letters-div">
-      <div className="letter-input" id={letterCheck}>
-        {letter}
-      </div>
+    <div className="board-letter-cell" id={letterCheck}>
+      {letter}
     </div>
   )
 }
