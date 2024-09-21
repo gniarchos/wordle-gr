@@ -26,6 +26,12 @@
   outline: none;
 }
 
+@media screen and (max-width: 768px) {
+  .board-wrapper {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (display-mode: standalone) {
   .board-wrapper {
     margin-top: 80px;
