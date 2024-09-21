@@ -76,30 +76,78 @@ export default function App() {
         }}
       >
         <Navbar />
-        {won === true && <Confetti />}
-        <div className="win-lose">
-          {won === true && <h1>YOU WON!</h1>}
-          {lose === true && <h1>{pickedWord}</h1>}
-        </div>
-
-        {(won === true || lose === true) && (
-          <div className="blur-bg">
-            <div className="win-lose-mobile">
-              {won === true && <h1>YOU WON!</h1>}
-              {lose === true && <h1>{pickedWord}</h1>}
-            </div>
-          </div>
-        )}
+        {won && <Confetti />}
 
         <Board />
 
-        <div className="btn-new-div">
-          {gameEnded && (
-            <button className="btn-newGame" onClick={startNewGame}>
-              New Game
-            </button>
-          )}
-        </div>
+        {won ||
+          (lose && (
+            <div
+              className={
+                won ? "win-lose-container win" : "win-lose-container lose"
+              }
+            >
+              {won && (
+                <>
+                  <h1>Συγχαρητήρια!!</h1>
+                  <span>Βρήκες την λέξη!</span>
+
+                  {gameEnded && (
+                    <button className="btn-newGame" onClick={startNewGame}>
+                      New Game
+                    </button>
+                  )}
+                </>
+              )}
+              {lose && (
+                <>
+                  <h1>Εχασες!</h1>
+                  <span style={{ fontSize: "1.2rem" }}>
+                    Η λέξη ήταν: <b>{pickedWord}</b>
+                  </span>
+
+                  {gameEnded && (
+                    <button className="btn-newGame" onClick={startNewGame}>
+                      New Game
+                    </button>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
+
+        {(won || lose) && (
+          <div className="blur-bg">
+            <div className="win-lose-container-mobile">
+              {won && (
+                <>
+                  <h1>Συγχαρητήρια!!</h1>
+                  <h3>Βρήκες την λέξη!</h3>
+
+                  {!gameEnded && (
+                    <button className="btn-newGame" onClick={startNewGame}>
+                      New Game
+                    </button>
+                  )}
+                </>
+              )}
+              {lose && (
+                <>
+                  <h1>Εχασες!</h1>
+                  <span style={{ fontSize: "1.2rem" }}>
+                    Η λέξη ήταν: <b>{pickedWord}</b>
+                  </span>
+
+                  {gameEnded && (
+                    <button className="btn-newGame" onClick={startNewGame}>
+                      New Game
+                    </button>
+                  )}
+                </>
+              )}
+            </div>
+          </div>
+        )}
 
         <Keyboard />
       </AppContext.Provider>

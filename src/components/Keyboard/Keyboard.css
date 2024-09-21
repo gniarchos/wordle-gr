@@ -5,12 +5,15 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .keyboard-row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 10px;
+  width: 100%;
 }
 
 .keyboard-key {
