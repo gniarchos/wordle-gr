@@ -54,3 +54,15 @@
   margin-right: 10px;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .statistics-player-numbers {
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+
+  .statistics-data-subtitle {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}

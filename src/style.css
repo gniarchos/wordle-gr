@@ -68,16 +68,16 @@
 }
 
 .app-popup-bg {
-  position: fixed; /* Stay in place */
-  padding-top: 100px; /* Location of the box */
+  position: fixed;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  z-index: 5000;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9000;
   animation: fadeIn 300ms linear;
   backdrop-filter: blur(3px);
 }
@@ -94,13 +94,13 @@
 .app-popup-container {
   background-color: var(--app-popup-bg);
   margin: auto;
-  padding: 20px;
+  padding: 40px;
   width: 40%;
-  margin-top: 20px;
   border-radius: 15px;
-  padding-bottom: 80px;
   transform: translateY(10%);
   animation: UpDown 100ms linear;
+  box-shadow: rgba(163, 163, 163, 0.2) 0px 2px 8px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .app-popup-content {
@@ -113,6 +113,9 @@
   font-size: 2.3rem;
   font-weight: bold;
   margin-left: 700px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 .app-close-popup:hover,
@@ -159,22 +162,20 @@
   }
 
   .btn-newGame {
-    /* position: fixed; */
-    /* bottom: 120px; */
-    /* left: 130px; */
     margin-top: 0px;
     color: var(--text-color-btn);
   }
 
   .app-popup-container {
-    width: 85vw;
-    margin-top: -100px;
-    background-color: var(--app-popup-bg);
-  }
-
-  .info {
+    width: 70%;
+    height: 70%;
+    overflow: auto;
     margin-top: -120px;
     padding-bottom: 0px;
+  }
+
+  .app-popup-content h1 {
+    font-size: 1.8rem;
   }
 
   .number-data {

@@ -45,7 +45,7 @@ export default function Statistics({ closePopup, pushFilterStyle }) {
         </span>
 
         <div className="app-popup-content">
-          <h2>Statistics</h2>
+          <h2 style={{ marginTop: "0px" }}>Statistics</h2>
           <div className="statistics-player-info">
             <div className="statistics-player-data">
               <p className="statistics-player-numbers">
