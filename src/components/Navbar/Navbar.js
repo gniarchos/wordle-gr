@@ -27,10 +27,6 @@ export default function Navbar() {
     setOpenInfo(true)
   }
 
-  function gotoGithub() {
-    window.location.href = "https://github.com/gniarchos/wordle-gr"
-  }
-
   function changeTheme() {
     if (
       localStorage.getItem("lightTheme") === "false" ||
@@ -47,11 +43,10 @@ export default function Navbar() {
   return (
     <div className="navbar-wrapper">
       <div className="navbar-info-git">
-        <Icon
-          onClick={gotoGithub}
-          className="navbar-git-img"
-          icon="ant-design:github-filled"
-        />
+        <a target="_blank" href="https://github.com/gniarchos/wordle-gr">
+          <Icon className="navbar-git-img" icon="ant-design:github-filled" />
+        </a>
+
         <Icon
           onClick={openInfoPop}
           className="navbar-info-img"
