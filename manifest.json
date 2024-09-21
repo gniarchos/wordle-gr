@@ -1,7 +1,7 @@
 {
   "name": "Wordle GR",
   "short_name": "Wordle GR",
-  "description": "The famous game now in Greek!",
+  "description": "The famous game in Greek!",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,7 +14,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#121213",
+  "background_color": "#121213",
   "display": "standalone"
 }
