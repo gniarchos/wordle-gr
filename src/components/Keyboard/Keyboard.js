@@ -1,5 +1,6 @@
 import React from "react"
-import { AppContext } from "../App"
+import { AppContext } from "../../App"
+import "./Keyboard.css"
 
 export default function Keyboard(props) {
   const {
@@ -435,18 +436,18 @@ export default function Keyboard(props) {
   })
 
   return (
-    <div className="keyboard">
-      <div className="row">
+    <div className="keyboard-wrapper">
+      <div className="keyboard-row">
         <div
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ε")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ε")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ε")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ε
@@ -455,12 +456,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ρ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ρ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ρ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ρ
@@ -469,12 +470,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Τ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Τ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Τ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Τ
@@ -483,12 +484,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Υ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Υ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Υ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Υ
@@ -497,12 +498,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Θ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Θ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Θ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Θ
@@ -511,12 +512,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ι")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ι")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ι")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ι
@@ -525,12 +526,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ο")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ο")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ο")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ο
@@ -539,28 +540,28 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Π")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Π")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Π")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Π
         </div>
       </div>
-      <div className="row">
+      <div className="keyboard-row">
         <div
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Α")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Α")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Α")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Α
@@ -569,12 +570,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Σ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Σ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Σ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Σ
@@ -583,12 +584,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Δ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Δ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Δ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Δ
@@ -597,12 +598,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Φ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Φ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Φ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Φ
@@ -611,12 +612,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Γ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Γ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Γ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Γ
@@ -625,12 +626,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Η")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Η")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Η")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Η
@@ -639,12 +640,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ξ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ξ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ξ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ξ
@@ -653,12 +654,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Κ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Κ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Κ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Κ
@@ -667,31 +668,31 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Λ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Λ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Λ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Λ
         </div>
       </div>
-      <div className="row">
-        <div onClick={(e) => addLetter(e)} className="key enter-key">
+      <div className="keyboard-row">
+        <div onClick={(e) => addLetter(e)} className="keyboard-key enter-key">
           ENTER
         </div>
         <div
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ζ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ζ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ζ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ζ
@@ -700,12 +701,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Χ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Χ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Χ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Χ
@@ -714,12 +715,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ψ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ψ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ψ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ψ
@@ -728,12 +729,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ω")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ω")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ω")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ω
@@ -742,12 +743,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Β")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Β")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Β")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Β
@@ -756,12 +757,12 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Ν")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Ν")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Ν")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Ν
@@ -770,17 +771,17 @@ export default function Keyboard(props) {
           onClick={(e) => addLetter(e)}
           className={
             nearLetArr.includes("Μ")
-              ? "key near"
+              ? "keyboard-key near"
               : correctLetters.includes("Μ")
-              ? "key correct"
+              ? "keyboard-key correct"
               : notLetters.includes("Μ")
-              ? "key not"
-              : "key"
+              ? "keyboard-key not"
+              : "keyboard-key"
           }
         >
           Μ
         </div>
-        <div onClick={(e) => addLetter(e)} className="key delete-key">
+        <div onClick={(e) => addLetter(e)} className="keyboard-key delete-key">
           DELETE
         </div>
       </div>

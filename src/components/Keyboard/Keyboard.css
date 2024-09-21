@@ -1,0 +1,100 @@
+.keyboard-wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.keyboard-key {
+  width: 50px;
+  height: 60px;
+  background-color: var(--keyboard-letter-back);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  color: var(--text-color);
+}
+
+.keyboard-key.enter-key {
+  width: 80px;
+  font-weight: 700;
+}
+
+.keyboard-key.delete-key {
+  width: 70px;
+  font-weight: 700;
+}
+
+#correct {
+  background: #538d4e;
+  transition: all 500ms ease-in-out;
+  color: whitesmoke;
+}
+
+#near {
+  background: #b59f3b;
+  transition: all 500ms ease-in-out;
+  color: whitesmoke;
+}
+
+#error {
+  background: var(--board-letter-back);
+  transition: all 500ms ease-in-out;
+  color: whitesmoke;
+}
+
+.near {
+  background: #b59f3b;
+}
+
+.correct {
+  background: #538d4e;
+}
+
+.not {
+  background: var(--keyboard-not);
+}
+
+@media (max-width: 768px) {
+  .keyboard-wrapper {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .keyboard-row {
+    gap: 7px;
+  }
+
+  .keyboard-key {
+    width: 35px;
+    font-size: 1rem;
+  }
+
+  .keyboard-key.enter-key {
+    width: 50px;
+  }
+
+  .keyboard-key.delete-key {
+    width: 55px;
+  }
+}
+
+@media screen and (display-mode: standalone) {
+  .keyboard-wrapper {
+    position: absolute;
+    bottom: 60px;
+  }
+}

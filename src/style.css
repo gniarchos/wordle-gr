@@ -7,105 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-}
-
-.worlde-h1 {
-  font-weight: 800;
-  font-size: 2rem;
-  line-height: 7px;
-  font-family: "Anek Tamil", sans-serif;
-  margin-bottom: 10px;
-  user-select: none;
-}
-
-.navbar {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 0.5px solid var(--navbar-line);
-}
-
-.theme-stats-div {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-right: 1%;
-  width: 80px;
-}
-
-.info-git-div {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  margin-left: 1%;
-  width: 80px;
-}
-
-.info-img {
-  color: var(--images-color);
-  cursor: pointer;
-}
-
-.score-img {
-  color: var(--images-color);
-  cursor: pointer;
-}
-
-.theme-img {
-  color: var(--images-color);
-  cursor: pointer;
-}
-
-.git-img {
-  color: var(--images-color);
-  cursor: pointer;
-}
-
-.nav-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-subtitle {
-  font-size: 0.7rem;
-  margin: 0;
-  user-select: none;
-}
-
-.board-wrapper {
-  margin-top: 100px;
-}
-
-.row-board {
-  display: flex;
-  flex-direction: row;
-}
-
-.letter-input {
-  width: 54px;
-  height: 54px;
-  background: none;
-  border: 2px solid var(--border-board);
-  color: var(--text-color);
-  font-size: 3rem;
-  text-align: center;
-  caret-color: transparent;
-  cursor: default;
-  text-transform: capitalize;
-  margin: 3px;
-  transition: all 0.5s linear;
-}
-
-.letter-input:focus {
-  outline: none;
+  height: 100%;
 }
 
 .active {
@@ -119,67 +21,6 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-}
-
-.key {
-  width: 50px;
-  height: 60px;
-  background-color: var(--keyboard-letter-back);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  user-select: none;
-  color: var(--text-color);
-}
-
-.enter-key {
-  width: 80px;
-  font-weight: 700;
-}
-
-.delete-key {
-  width: 70px;
-  font-weight: 700;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-#correct {
-  background: #538d4e;
-  transition: all 500ms ease-in-out;
-  color: whitesmoke;
-}
-
-#near {
-  background: #b59f3b;
-  transition: all 500ms ease-in-out;
-  color: whitesmoke;
-}
-
-#error {
-  background: var(--board-letter-back);
-  transition: all 500ms ease-in-out;
-  color: whitesmoke;
-}
-
-.near {
-  background: #b59f3b;
-}
-
-.correct {
-  background: #538d4e;
-}
-
-.not {
-  background: var(--keyboard-not);
 }
 
 .win-lose {
@@ -217,7 +58,7 @@
   color: var(--text-color);
 }
 
-.popup-bg {
+.app-popup-bg {
   position: fixed; /* Stay in place */
   padding-top: 100px; /* Location of the box */
   left: 0;
@@ -241,8 +82,8 @@
   }
 }
 
-.popup-div {
-  background-color: var(--popup-bg);
+.app-popup-container {
+  background-color: var(--app-popup-bg);
   margin: auto;
   padding: 20px;
   width: 40%;
@@ -253,11 +94,11 @@
   animation: UpDown 100ms linear;
 }
 
-.popup-content {
+.app-popup-content {
   text-align: center;
 }
 
-.close {
+.app-close-popup {
   color: #aaaaaa;
   float: right;
   font-size: 2.3rem;
@@ -265,149 +106,14 @@
   margin-left: 700px;
 }
 
-.close:hover,
-.close:focus {
+.app-close-popup:hover,
+.app-close-popup:focus {
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
 }
 
-.player-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-}
-
-.data-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-}
-
-.number-data {
-  font-size: 2.1rem;
-  margin-bottom: 0;
-  width: fit-content;
-}
-
-.data-subtitle {
-  font-size: 1.1rem;
-  margin-top: 5px;
-  width: fit-content;
-}
-
-.meter {
-  height: 20px;
-  position: relative;
-  border-radius: 5px;
-  margin-left: 10px;
-  width: 100%;
-}
-
-.meter > span {
-  display: block;
-  height: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  background-color: #555;
-  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
-    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
-  position: relative;
-  overflow: hidden;
-}
-
-.attempts-wrapper {
-  display: flex;
-  flex-direction: row;
-  height: 30px;
-}
-
-.bar {
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  background-color: #555;
-  overflow: hidden;
-}
-
-.bar-number {
-  color: whitesmoke;
-  float: right;
-  margin-right: 10px;
-}
-
-.game-info {
-  font-size: 1.5rem;
-}
-
-.letter-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.letter-green {
-  text-align: center;
-  background-color: #538d4e;
-  width: 40px;
-  padding: 5px;
-  color: whitesmoke;
-}
-
-.letter-yellow {
-  text-align: center;
-  background-color: #b59f3b;
-  width: 40px;
-  padding: 5px;
-  color: whitesmoke;
-}
-
-.letter-grey {
-  text-align: center;
-  background-color: #555;
-  width: 40px;
-  padding: 5px;
-  color: whitesmoke;
-}
-
-.color-info {
-  display: flex;
-  align-items: center;
-}
-
-@media all and (max-width: 499px) {
-  .keyboard {
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .key {
-    width: 35px;
-    font-size: 1rem;
-  }
-
-  .enter-key {
-    width: 50px;
-  }
-
-  .delete-key {
-    width: 55px;
-  }
-
-  .row {
-    gap: 7px;
-  }
-
-  .board-wrapper {
-    margin-top: 20px;
-  }
-
+@media (max-width: 768px) {
   .win-lose {
     display: none;
   }
@@ -437,10 +143,10 @@
     color: var(--text-color-btn);
   }
 
-  .popup-div {
+  .app-popup-container {
     width: 85vw;
     margin-top: -100px;
-    background-color: var(--popup-bg);
+    background-color: var(--app-popup-bg);
   }
 
   .info {
@@ -454,15 +160,6 @@
 }
 
 @media screen and (display-mode: standalone) {
-  .board-wrapper {
-    margin-top: 60px;
-  }
-
-  .keyboard {
-    position: absolute;
-    bottom: 60px;
-  }
-
   .btn-new-div {
     z-index: 500;
     height: 30px;
