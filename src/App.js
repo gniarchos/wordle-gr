@@ -124,7 +124,7 @@ export default function App() {
                   <h1>Συγχαρητήρια!!</h1>
                   <h3>Βρήκες την λέξη!</h3>
 
-                  {!gameEnded && (
+                  {gameEnded && (
                     <button className="btn-newGame" onClick={startNewGame}>
                       New Game
                     </button>
